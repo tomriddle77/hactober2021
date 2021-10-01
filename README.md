@@ -15,7 +15,7 @@
 
 </div>
 
-# About❓
+# About
 Getting started with web development? What else would be better than practising it.
 
 So welcome developer. You are at right place.😊
