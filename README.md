@@ -1,7 +1,7 @@
-# hactober2021
+# Hacktober2021
 [![Hacktoberfest 2021]
 ## [Hactoberfest FAQs](https://hacktoberfest.digitalocean.com/faq)
-# <h1 align="center">HACTOBERPROJECTS</h1>
+# <h1 align="center">HACKTOBERPROJECTS</h1>
 
 
 <div align="center">
