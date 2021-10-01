@@ -74,3 +74,5 @@ git push -u origin <your_branch_name>
 **Thank you for your interest in contributing to our Repo!🏼**
 
 **Kudos to you🎈**
+
+**Hoping to see you soon!**
