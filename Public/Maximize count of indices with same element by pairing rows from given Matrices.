@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+  
+// Function to find the maximum score
+void maxScoreSum(vector<vector<int> >& a,
+                 vector<vector<int> >& b)
+{
+    // Stores the maximum sum of scores
+    int maxSum = 0;
+  
+    vector<int> pos;
+    for (int i = 0; i < a.size(); i++) {
+        pos.push_back(i);
+    }
+  
+    // For each permutation of pos vector
+    // calculate the score
+    do {
+        int curSum = 0;
+        for (int i = 0; i < a.size(); i++) {
+  
+            for (int j = 0;
+                 j < a[pos[i]].size(); j++) {
+  
+                // If values at current indexes
+                // are same then increment the
+                // current score
+                curSum += (a[pos[i]][j] == b[i][j]);
+                maxSum = max(maxSum, curSum);
+            }
+        }
+    } while (next_permutation(pos.begin(), pos.end()));
+  
+    // Print the maximum score
+    cout << maxSum;
+}
+  
+// Driver Code
+int main()
+{
+    int N = 3, M = 3;
+    vector<vector<int> > a
+        = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 1 } };
+    vector<vector<int> > b
+        = { { 1, 0, 0 }, { 0, 0, 1 }, { 1, 1, 0 } };
+  
+    maxScoreSum(a, b);
+  
+    return 0;
+}
