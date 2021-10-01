@@ -697,7 +697,7 @@ void playTicTacToe(int whoseTurn)
 	while (gameOver(board) == 0 && moveIndex != SIDE*SIDE) 
 	{ 
 		int n;
-		if (whoseTurn == COMPUTER) 
+		if (whoseTurn == COMPUTER) //if its computer move
 		{
 			n = bestMove(board, moveIndex);
 			x = n / SIDE;
@@ -709,7 +709,7 @@ void playTicTacToe(int whoseTurn)
 			whoseTurn = HUMAN;
 		} 
 		
-		else if (whoseTurn == HUMAN) 
+		else if (whoseTurn == HUMAN) // if its human move
 		{
 			printf("You can insert in the following positions : ");
 			for(int i=0; i<SIDE; i++)
@@ -751,7 +751,7 @@ void playTicTacToe(int whoseTurn)
 		else if (whoseTurn == HUMAN) 
 			whoseTurn = COMPUTER; 
 		
-		declareWinner(whoseTurn); 
+		declareWinner(whoseTurn); //this function declares the winner
 	} 
 } 
 
