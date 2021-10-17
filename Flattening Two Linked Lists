@@ -1,0 +1,41 @@
+/*struct Node{
+ int data;
+    struct Node* next;
+    struct Node* bottom;
+}
+Node(int x)
+{
+      data=x;
+      next=NULL;
+      bottom=NULL;
+}
+*/
+Node* merge(Node* head1,Node *head2)
+{
+   if(head1==0)return head2;
+   if(head2==0)return head1;
+   
+   Node* res;
+   if(head1->data<=head2->data)
+   {
+       res=head1;
+       res->bottom=merge(head1->bottom,head2);
+   }
+   else
+   {
+       res=head2;
+       res->bottom=merge(head1,head2->bottom);
+   }
+   res->next=NULL;
+   return res;
+}
+
+Node *flatten(Node *root)
+{
+  // Your code here
+  if(root==0 || root->next==0)
+  return root;
+  
+  return merge(root,flatten(root->next));
+  
+}
